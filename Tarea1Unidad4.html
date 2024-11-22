@@ -47,6 +47,13 @@
       padding: 10px 0;
       margin-top: 20px;
     }
+    details {
+      margin: 10px 0;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -70,63 +77,52 @@
     <p><strong>Nombre completo:</strong> Diego Ivan Dueñas Padilla</p>
     <p><strong>No. de Control:</strong> 21490540</p>
     <p><strong>Correo electrónico:</strong> a21490540@itmexicali.edu.mx</p>
-    
   </section>
 
   <section id="acerca-de-la-materia">
     <h2>Acerca de la materia</h2>
     <p><strong>Profesor:</strong> Edder Ivan Pimentel Felix</p>
-    <p><strong>Materia:</strong> Programación web </p>
+    <p><strong>Materia:</strong> Programación web</p>
     <p><strong>Unidad IV:</strong> Programación del lado del servidor</p>
-    <p><strong>Tarea:</strong> Tarea I. Conceptos y ejemplos básicos en HTML </p>
+    <p><strong>Tarea:</strong> Tarea I. Conceptos y ejemplos básicos en HTML</p>
   </section>
 
   <section id="conceptos-basicos">
     <h2>Conceptos Básicos</h2>
-    <ul>
-      <li><a href="#mecanismos-de-seguridad">Mecanismos de seguridad en formularios</a></li>
-      <li><a href="#introduccion-ajax">Introducción a AJAX</a></li>
-      <li><a href="#jquery">JQuery</a></li>
-      <li><a href="#mootools">Mootools</a></li>
-      <li><a href="#prototype">Prototype</a></li>
-    </ul>
-    <!-- Espacios para cada concepto -->
-    <article id="mecanismos-de-seguridad">
-      <h2>Mecanismos de seguridad en formularios</h2>
-      <p>Los formularios son una de las mayores fuentes de problemas de seguridad y spam en sitios y aplicaciones web, ya que son la principal manera con la que los usuarios podemos ingresar datos en una  aplicación.
-        Un formulario poco seguro puede producir problemas diversos, ya sea durante el procesamiento de los datos enviados, mediante la incorporación de spam al sitio web o la explotación de los sistemas de envío de email
-        del servidor, por poner varios ejemplos. Algunos de estos mecanismos son:
-      </p>
+    <details>
+      <summary>Mecanismos de seguridad en formularios</summary>
+      <p>Los formularios son una de las mayores fuentes de problemas de seguridad y spam en sitios y aplicaciones web. Algunos de estos mecanismos son:</p>
       <h4>Captchas</h4>
-      <p>Una de las mayores problematicas de los formularios es que los robots se dediquen a enviar información, buscando o explotando vulnerabilidades detectadas. Es por ello fundamental que nos aseguraremos de que son realmente
-        humanos los que están intercatuando con nuestros formularios. Para ello se puede incorporar un sistema de captcha adecuado. Existen diversas alternativas en el mercado, pero igual que aparecen desaparecen. Una que perdura y en
-        la que podemos confiar es reCaptcha, un servicio ofrecido por Google. Básicamente es un sistema muy amistoso para el usuario que muchas veces se valida simplemente pulsando un checkbox. Seguro que hemos visto decenas de veces la 
+      <p>Una de las mayores problematicas de los formularios es que los robots se dediquen a enviar información, buscando o explotando vulnerabilidades detectadas. Es por ello que nos aseguraremos de que son realmente
+        los que están interactuando con nuestros formularios. Para ello se puede incorporar un sistema de captcha adecuado. Existen diversas alternativas en el mercado, pero igual que aparecen desaparecen. Una que perdura y en
+        la que podemos confiar es reCaptcha, un servicio ofrecido por Google. Básicamente es un sistema muy amistoso para el usuario que muchas veces se valida simplemente pulsando un checkbox. Seguro que hemos visto decenas de veces la
         interfaz de reCaptcha en los sitios web. Tiene un aspecto como este:
       </p>
       <center>
-      <img src="https://dinahosting.com/ayuda/upload/2020/02/reCAPTCHA.jpg" width="300" height="150" />
-        </center>
-        <h4>Evitar ataques CSRF</h4>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ573Srpc2yvBvtekeV50GQklvSnneVIjiMA&s" width="400" height="250" />
-        <p>Otro de los males de los formularios son los ataques CSRF (del inglés Cross-site request forgery), que se producen al realizarse solicitudes POST desde otros dominios que los ciberdelincuentes aprovechan para 
-           apoderarse en sesiones abiertas sobre los sitios atacados. CSRF se basa generalmente en un token, que simplemente se valida antes de aceptar el procesamiento de la información que viene mediante solicitudes POST.
-           La mayoria de los frameworks incluyen por defecto protección anti CSRF, una razón más para usarlos.
-        </p>
-        <h4>Protocolo HTTPS</h4>
-        <img src="https://www.keyfactor.com/wp-content/uploads/iStock-1252346549-1.jpg" width="400" height="250" />
-        <p>Finalmente, pero no menos importante, está el protoclo HTTPS. Se podria considerar como un escudo para proteger los datos confidenciales del usuario y del servidor en general.
-          Al activar HTTPS, se está asegurando que los mensajes de nuestros usuarios estén encriptados y lejos de delincuentes digitales.
-        </p>
-    </article>
-    <article id="introduccion-ajax">
-      <h3>Introducción a AJAX</h3>
+        <img src="https://dinahosting.com/ayuda/upload/2020/02/reCAPTCHA.jpg" width="300" height="150" />
+      </center>
+      <h4>Evitar ataques CSRF</h4>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ573Srpc2yvBvtekeV50GQklvSnneVIjiMA&s" width="400" height="250" />
+      <p>Otro de los males de los formularios son los ataques CSRF (del inglés Cross-site request forgery), que se producen al realizarse solicitudes POST desde otros dominios que los ciberdelincuentes aprovechan para 
+        apoderarse en sesiones abiertas sobre los sitios atacados. CSRF se basa generalmente en un token, que simplemente se valida antes de aceptar el procesamiento de la información que viene mediante solicitudes POST.
+        La mayoria de los frameworks incluyen por defecto protección anti CSRF, una razón más para usarlos.</p>
+      <h4>Protocolo HTTPS</h4>
+      <img src="https://www.keyfactor.com/wp-content/uploads/iStock-1252346549-1.jpg" width="400" height="250" />
+      <p>Finalmente, pero no menos importante, está el protoclo HTTPS. Se podria considerar como un escudo para proteger los datos confidenciales del usuario y del servidor en general.
+        Al activar HTTPS, se está asegurando que los mensajes de nuestros usuarios estén encriptados y lejos de delincuentes digitales.
+      </p>
+    </details>
+
+    <details>
+      <summary>Introducción a AJAX</summary>
       <img src="https://www.epitech-it.es/wp-content/uploads/2022/02/ajax-1.jpg" width="400" height="150"/>
       <p>Se refiere a un grupo de tecnologías que se utilizan para desarrollar aplicaciones web. Al combinar estas tecnologías, las páginas web parece que son más
         receptivas puesto que los paquetes pequeños de datos se intercambian con el servidor y las páginas web no se vuelven a cargar cada vez que un usuario realiza un cambio de 
-        entrada. Ajax permite que un usuario de la aplicación web interactúe con una página web sin la interrupción que implica volver a cagar la página web. La interacción del siito web 
-        ocurre rápidamente sólo con partes de la página de recarga y renovación.</p>
-        <p>Ajax se compone de las siguientes tecnologias:</p>
-        <li>XHTML y CSS para presentar información</li>
+        entrada. Ajax permite que un usuario de la aplicación web interactúe con una página web sin la interrupción que implica volver a cagar la página web. La interacción del siito web
+        ocurre rápidamente sólo con partes de la página de recarga y renovación.
+      </p>
+      <p>Ajax se compone de las siguientes tecnologias:</p>
+      <li>XHTML y CSS para presentar información</li>
         <li>DOM para visualizar e interactuar de forma dinámica la información presentada</li>
         <li>El objeto XMLHttpRequest para manipular los datos de forma asíncrona con el servidor web</li>
         <li>Se visualiza JavaScript para enlazar solicitudes e información de datos</li>
@@ -148,9 +144,10 @@
                 <li>Accesibilidad: Puesto que no todos los navegadores disponen de soporte para JavaScript o el objeto XMLHttpRequest, debe asegurarse de proporcionar una manera de hacer que la aplicación web sea accesible
                   para todos los usuarios.</li>
                   <li>Motor de búsqueda: No es posible realizar búsquedas en aplicaciones Ajax; sin embargo, sí se pueden utilizar las caracteristicas y elementos de Ajax de una aplicación en la que se puedan realizar búsquedas. </li>
-    </article>
-    <article id="jquery">
-      <h3>JQuery</h3>
+    </details>
+
+    <details>
+      <summary>JQuery</summary>
       <img src="https://miro.medium.com/v2/resize:fit:860/0*eFomJUFua8tuqe8g.png" width="300" height="150"/>
       <p>jQuery, creado en 2006, es una biblioteca de JavaScript rápida, pequeña y rica en funciones que se ha convertido en una de las bibliotecas JavaScript más populares del mundo, utilizada por más del 70% de los 10 millones de sitios web más populares.</p>
       <p>Entre sus características más destacadas podemos mencionar que facilita la escritura de JavaScript, abstrae muchas incompatibilidades entre navegadores y aporta una gran cantidad de utilidades listas para usar.</p>
@@ -163,156 +160,193 @@
       <p>La delegación de eventos optimiza el rendimiento, mientras que el accionador manual de eventos brinda mayor control sobre su ejecución. jQuery también implementa eventos personalizados para extender su funcionalidad según se requiera</p>
       <p>Por último, jQuery incluye una variedad de utilidades como iteradores y métodos para arreglos, parcheo de datos JSON, XML y cadenas de parámetros, métodos para serialización/deserialización de formularios, y detección de características de navegadores. Estas funciones
         facilitan muchas tareas comunes en el desarrollo web.</p>   
-      </article>
-    <article id="mootools">
-      <h3>Mootools</h3>
+    </details>
+
+    <details>
+      <summary>Mootools</summary>
       <img src="https://mootools.net/images/logo/mootools.png" width="250" height="150" />
       <p>El framework MooTools es un conjunto compacto y modular de herramientas para desarrollaodres profesionales en JacaScript que se distingue por sus posibilidades de aplicación gracias a un elegante y bien documentado grupo de API y por estar orientado a objetos. MooTools pone disposición
-         del desarrollador varias funciones y clases para facilitar la programación y el diseño de proyectos web modernos y simplificar en gran medida el proceso de trabajo.</p>
-         <p>A diferencia del tradicional JavaScript, MooTools se fundamenta sobre un sistema de herencia de clases que sirve de base para la programación orientada a objetos y, por lo tanto, también para todos los componentes incluidos en el framework. Este sistema no solo se caracteriza por ser fácilmente escalable
-          sino también por que permite escribir código fuente flexible y reutilizable.
-         </p>
-    </article>
-    <article id="prototype">
-      <h3>Prototype</h3>
+        del desarrollador varias funciones y clases para facilitar la programación y el diseño de proyectos web modernos y simplificar en gran medida el proceso de trabajo.</p>
+        <p>A diferencia del tradicional JavaScript, MooTools se fundamenta sobre un sistema de herencia de clases que sirve de base para la programación orientada a objetos y, por lo tanto, también para todos los componentes incluidos en el framework. Este sistema no solo se caracteriza por ser fácilmente escalable
+         sino también por que permite escribir código fuente flexible y reutilizable.
+        </p>
+    </details>
+
+    <details>
+      <summary>Prototype</summary>
       <img src="https://process.filestackapi.com/cache=expiry:max/resize=width:1050/4JH9hR06Q2Sm1Ftf7kfa" width="350" height="200"/>
       <p>Se refiere a un mecanismo en JavaScript que permite a los objetos compartir propiedades y métodos. Es un concepto fundamental del lenguaje JavaScript, relacionado con la herencia y el diseño de objetos.
         JacaScript usa un sistema de herencia basado en prototipos, lo que significa que los objetos pueden heredar directamente de otros objetos. En lugar de usar clases como en otros lenguajes de programación orientados a objetos, JacaScript tiene lo que se llama una cadena de prototipos, en la cual cada objeto puede
         tener un enlace a un objeto prototipo del que puede heredar propiedades y métodos.</p>
         <p>Este modelo de herencia es lo que diferencia a JavaScript de otros lenguajes orientados a objetos, y hace posible la reutilización eficiente del código sin necesidad de clases estrictas</p>
-      
-    </article>
+    </details>
   </section>
 
   <section id="ejemplos-basicos">
     <h2>Ejemplos Básicos</h2>
-    <ul>
-      <li><a href="#ejemplo-mecanismos">Mecanismos de seguridad en formularios</a></li>
-      <li><a href="#ejemplo-ajax">Introducción a AJAX</a></li>
-      <li><a href="#ejemplo-jquery">JQuery</a></li>
-      <li><a href="#ejemplo-mootools">Mootools</a></li>
-      <li><a href="#ejemplo-prototype">Prototype</a></li>
-    </ul>
-    <!-- Espacios para ejemplos -->
-    <article id="ejemplo-mecanismos">
-      <h3>Mecanismos de seguridad en formularios</h3>
-      <h3> Ejemplo: CAPTCHA en un formulario </h3>
-      <p>label for= "nombre">Nombre: /label></p>
-      <p>input type="text" id="nombre" name="nombre" required><&br><&br></p>
-      <br>
-      <p> label for ="captcha" Resuelve: 5 + 3 = /label> </p>
-      <p> button type="submit"> Enviar /button></p>
-      <p>/form></p>
+  
+    <details>
+      <summary>Mecanismos de seguridad en formularios</summary>
+      <h3>Ejemplo: CAPTCHA en un formulario</h3>
+      <form action="procesar.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+  
+        <label for="captcha">Resuelve: 7 + 3 = </label>
+        <input type="text" id="captcha" name="captcha" required><br><br>
+  
+        <button type="submit">Enviar</button>
+      </form>
       <p>Obviamente abriendo y cerrando las etiquetas de la manera correcta</p>
+  
       <h4>Explicación del código:</h4>
-      <p>Primero codificamos el campo de entrada para el nombre</p>
-      <p>label for="nombre">Nombre: /label></p>
-      <p>input type ="text" id ="nombre" name="nombre" required> br br</p>
-      <br>
-      <p>Por consiguiente introducimos el campo de entrada para el CAPTCHA</p>
-      <p>label for="captcha">Resuelve: 7 + 3 = /label></p>
-      <p>input type="text" id="captcha" name= "captcha" required></p>
-      <br>
-      <p>Y por ultimo pero no menos importante el boton de envio</p>
-      <p>button type="submit">Enviar /button</p>
-      <br>
+      <p>Primero codificamos el campo de entrada para el nombre:</p>
+      <p><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;</code></p>
+      <p><code>&lt;input type="text" id="nombre" name="nombre" required&gt;</code></p>
+      <p>Por consiguiente introducimos el campo de entrada para el CAPTCHA:</p>
+      <p><code>&lt;label for="captcha"&gt;Resuelve: 7 + 3 = &lt;/label&gt;</code></p>
+      <p><code>&lt;input type="text" id="captcha" name="captcha" required&gt;</code></p>
+      <p>Y por último pero no menos importante, el botón de envío:</p>
+      <p><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code></p>
+  
       <h4>Funcionamiento</h4>
-      <p>El usuario escribe su nombre y responde la pregunta del CAPTCHA</p>
-      <p>Al hacer clic en el botón "Enviar", los datos se envían al archivo procesar.php para ser validados</p>
-      <p>En el servidor: Se verifica que el campo "nombre" no esté vacio y después se valida si la respuesta al CAPTCHA es correcta (7+3=10 en este caso)</p>
+      <p>El usuario escribe su nombre y responde la pregunta del CAPTCHA.</p>
+      <p>Al hacer clic en el botón "Enviar", los datos se envían al archivo <code>procesar.php</code> para ser validados.</p>
+      <p>En el servidor: Se verifica que el campo "nombre" no esté vacío y después se valida si la respuesta al CAPTCHA es correcta (7+3=10 en este caso).</p>
+  
       <h4>Pequeña demostración del formulario:</h4>
       <title>Formulario con CAPTCHA</title>
-</head>
-<body>
-  <h2>Formulario con CAPTCHA</h2>
-  <form action="procesar.php" method="post">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required><br><br>
-    
-    <label for="captcha">Resuelve: 7 + 3 = </label>
-    <input type="text" id="captcha" name="captcha" required><br><br>
-    <button type="submit">Enviar</button>
-    </article>
-    <article id="ejemplo-ajax">
+    </details>
+  
+    <details>
+      <summary>Introducción a AJAX</summary>
       <h3>Introducción a AJAX</h3>
-      <img src="https://www.monografias.com/trabajos43/ajax/Image4669.gif" width="350" height="300" />
-      <p>La siguiente imagen compara dos modelos de interacción entre el cliente y el servidor en aplicaciones web: el modelo clásico y el modelo Ajax. </p>
+      <img src="https://www.monografias.com/trabajos43/ajax/Image4669.gif" width="350" height="300" alt="Imagen de AJAX"/>
+      <p>La siguiente imagen compara dos modelos de interacción entre el cliente y el servidor en aplicaciones web: el modelo clásico y el modelo Ajax.</p>
+  
       <h4>Modelo clásico de aplicación web (izquierda)</h4>
       <h4>Flujo de datos:</h4>
-      <li>La interfaz de usuario del navegador cliente envia una petición HTTP al servidor</li>
-      <li>El servidor procesa la solicitud y devuelve una respuesta completa recargando toda la página</li>
+      <ul>
+        <li>La interfaz de usuario del navegador cliente envía una petición HTTP al servidor.</li>
+        <li>El servidor procesa la solicitud y devuelve una respuesta completa recargando toda la página.</li>
+      </ul>
+      
       <h4>Componentes del servidor:</h4>
-      <li>Servidor web: Procesa las solicitudes HTTP</li>
-      <li>Sistemas como RDBMS(bases de datos relacionales), ERP (sistemas de planificación empresarial) o CRM (gestión de relaciones con clientes) que proporcionan los datos necesarios para la respuesta</li>
+      <ul>
+        <li>Servidor web: Procesa las solicitudes HTTP.</li>
+        <li>Sistemas como RDBMS (bases de datos relacionales), ERP (sistemas de planificación empresarial) o CRM (gestión de relaciones con clientes) que proporcionan los datos necesarios para la respuesta.</li>
+      </ul>
+  
       <h4>Limitaciones:</h4>
-      <li>Cada interacción del usuario requiere que el servidor reenvie toda la pagina, lo cual puede ser ineficiente</li>
-      <li>Hay un retraso perceptible debido a la recarga completa del contenido</li>
+      <ul>
+        <li>Cada interacción del usuario requiere que el servidor reenvíe toda la página, lo cual puede ser ineficiente.</li>
+        <li>Hay un retraso perceptible debido a la recarga completa del contenido.</li>
+      </ul>
+  
       <h4>Modelo Ajax de aplicación web (derecha)</h4>
       <h4>Flujo de datos:</h4>
-      <li>La interfaz del usuario del navegador cliente utiliza un motor Ajax para enviar y recibir datos al servidor sin necesidad de recargar toda la página.</li>
-      <h4>Componentes del servidor</h4>
-      <li>Similar al modelo clásico, pero aquí el servidor puede devolver datos más específicos y el motor Ajax los procesa dinpamicamente en la página.</li>
+      <ul>
+        <li>La interfaz del usuario del navegador cliente utiliza un motor Ajax para enviar y recibir datos al servidor sin necesidad de recargar toda la página.</li>
+      </ul>
+  
+      <h4>Componentes del servidor:</h4>
+      <ul>
+        <li>Similar al modelo clásico, pero aquí el servidor puede devolver datos más específicos y el motor Ajax los procesa dinámicamente en la página.</li>
+      </ul>
+  
       <h4>Ventajas</h4>
-      <li>La experiencia del usuario es más fluida, ya que solo se actualizan partes de la página según sea necesario,</li>
-      <li>Se reduce el uso de ancho de banda, ya que no se necesita recargar todo el contenido.</li>
-      <li>Mejor rendimiento y tiempos de respuesta más rápidos.</li>
-    </article>
-    <article id="ejemplo-jquery">
+      <ul>
+        <li>La experiencia del usuario es más fluida, ya que solo se actualizan partes de la página según sea necesario.</li>
+        <li>Se reduce el uso de ancho de banda, ya que no se necesita recargar todo el contenido.</li>
+        <li>Mejor rendimiento y tiempos de respuesta más rápidos.</li>
+      </ul>
+    </details>
+  
+    <details>
+      <summary>JQuery</summary>
       <h3>JQuery</h3>
-      <center><img src="https://media.geeksforgeeks.org/wp-content/uploads/130-1.png" width="350" height="250" /></center>
-      <li>Se importa la biblioteca jQuery desde un CDN de Google. Esto permite usar los métodos de jQuery para manipular el DOM, manejar eventos y crear animaciones.</li>
-      <li>Se importa tanto el archivo CSS como el archivo JS de Bootstrap desde un CDN. Aunque Bootstrap es útil para diseño y componentes responsivos, en este caso no parece que se esté utilizando explícitamente en el código. </li>
-      <h4>Resumen del proposito de este codigo:</h4>
-      <p>El código desmuestra:</p>
-      <li>Uso de jQuery para manipular el DOM y crear efectos de animación con métodos como fadeToggle()</li>
-      <li>Importación de Bootstrap, aunque no se utiliza específicamente en este ejemplo.</li>
-      <li>Integración de interactividad básica en una página HTML.</li>
+      <center><img src="https://media.geeksforgeeks.org/wp-content/uploads/130-1.png" width="350" height="250" alt="JQuery Example"/></center>
+      <ul>
+        <li>Se importa la biblioteca jQuery desde un CDN de Google. Esto permite usar los métodos de jQuery para manipular el DOM, manejar eventos y crear animaciones.</li>
+        <li>Se importa tanto el archivo CSS como el archivo JS de Bootstrap desde un CDN. Aunque Bootstrap es útil para diseño y componentes responsivos, en este caso no parece que se esté utilizando explícitamente en el código.</li>
+      </ul>
+  
+      <h4>Resumen del propósito de este código:</h4>
+      <p>El código demuestra:</p>
+      <ul>
+        <li>Uso de jQuery para manipular el DOM y crear efectos de animación con métodos como <code>fadeToggle()</code></li>
+        <li>Importación de Bootstrap, aunque no se utiliza específicamente en este ejemplo.</li>
+        <li>Integración de interactividad básica en una página HTML.</li>
+      </ul>
       <p>Se puede utilizar este ejemplo como base para crear páginas dinámicas y añadir más animaciones o interacciones.</p>
-    </article>
-
-    <article id="ejemplo-mootools">
+    </details>
+  
+    <details>
+      <summary>Mootools</summary>
       <h3>Mootools</h3>
       <h4>Pequeño ejemplo resumido</h4>
-      <center><img src="https://mootools.net/forge/uploads/screenshots/760/4681/8a2ec6f517eb0dbf721fcbf6181a2a79.png" width="400" height="250"/></center>
+      <center><img src="https://mootools.net/forge/uploads/screenshots/760/4681/8a2ec6f517eb0dbf721fcbf6181a2a79.png" width="400" height="250" alt="Mootools Example"/></center>
       <h4>Se resalta la sintaxis con EnlighterJS:</h4>
-      <li>Utiliza la biblioteca EnlighterJS para estilizar bloques de código y fragmentos en línea con resaltado de sintaxis</li>
-      <li>Se configura a través de un "meta" con las siguientes características:</li>
-      <li>Resalta bloques de código en etiquetas "pre" (con data-enlighter-language="js" indicando que el código es JavaScript).</li>
-      <li>Resalta fragmentos en línea que estén dentro de un "code" con la clase special.</li>
-      <li>Define una indentación de 4 espacios (data-indent="4") para el código.</li>
+      <ul>
+        <li>Utiliza la biblioteca EnlighterJS para estilizar bloques de código y fragmentos en línea con resaltado de sintaxis.</li>
+        <li>Se configura a través de un "meta" con las siguientes características:</li>
+        <ul>
+          <li>Resalta bloques de código en etiquetas "pre" (con <code>data-enlighter-language="js"</code> indicando que el código es JavaScript).</li>
+          <li>Resalta fragmentos en línea que estén dentro de un <code>code</code> con la clase <code>special</code>.</li>
+          <li>Define una indentación de 4 espacios (<code>data-indent="4"</code>) para el código.</li>
+        </ul>
+      </ul>
+  
       <h4>Se prepara la página para interactividad con MooTools:</h4>
-      <li>Se incluye MooTools, un framework de JavaScript, que permite realizar tareas como manejo de eventos, manipulación del DOM y animaciones</li>
-      <li>En este caso, el fragmento de código que se resalta en línea "window.addEvent('domready', function( ){ }) es un ejemplo típico de cómo MooTools escucha el evento
-          domready para ejecutar funciones una vez que el DOM está completamente cargado.</li>
-      <h4>Propósito general</h4> 
-      <li>EnlighterJS: Facilitar el resaltado visual de bloques de código o fragmentos en línea, útil para blogs técnicos, tutorial o documentación.</li>
-      <li>MooTools: Proveer herramientas para manejar eventos y agregar interactividad, aunque aquí se usa principalmente como ejemplo.</li>
+      <ul>
+        <li>Se incluye MooTools, un framework de JavaScript, que permite realizar tareas como manejo de eventos, manipulación del DOM y animaciones.</li>
+        <li>En este caso, el fragmento de código que se resalta en línea <code>window.addEvent('domready', function(){ })</code> es un ejemplo típico de cómo MooTools escucha el evento <code>domready</code> para ejecutar funciones una vez que el DOM está completamente cargado.</li>
+      </ul>
+  
+      <h4>Propósito general</h4>
+      <ul>
+        <li>EnlighterJS: Facilitar el resaltado visual de bloques de código o fragmentos en línea, útil para blogs técnicos, tutoriales o documentación.</li>
+        <li>MooTools: Proveer herramientas para manejar eventos y agregar interactividad, aunque aquí se usa principalmente como ejemplo.</li>
+      </ul>
       <p>El código anterior es un ejemplo básico para configurar un entorno donde se muestra código resaltado mientras MooTools está listo para interactuar con el DOM.</p>
-    </article>
-    
-    <article id="ejemplo-prototype">
+    </details>
+  
+    <details>
+      <summary>Prototype</summary>
       <h3>Prototype</h3>
-      <img src="https://process.filestackapi.com/cache=expiry:max/resize=width:1050/4JH9hR06Q2Sm1Ftf7kfa" width="300" height="150" />
+      <img src="https://process.filestackapi.com/cache=expiry:max/resize=width:1050/4JH9hR06Q2Sm1Ftf7kfa" width="300" height="150" alt="Prototype Example"/>
       <h4>Object():</h4>
-      <li>Representa el constructor base de todos los objetos en JavaScript</li>
-      <li>Todos los objetos en JavaScript descienden de este constructor.</li>
+      <ul>
+        <li>Representa el constructor base de todos los objetos en JavaScript.</li>
+        <li>Todos los objetos en JavaScript descienden de este constructor.</li>
+      </ul>
+  
       <h4>Object.prototype</h4>
-      <li>Es el prototipo predeterminado de los objetos creados a partir del constructor Object.</li>
-      <li>Contiene métodos y propiedades integradas, como .toString() o .hasOwnProperty().</li>
-      <li>Todos los objetos en JavaScript, si no tienen prototipos personalizados, heredan de Object.prototype.</li>
+      <ul>
+        <li>Es el prototipo predeterminado de los objetos creados a partir del constructor Object.</li>
+        <li>Contiene métodos y propiedades integradas, como <code>.toString()</code> o <code>.hasOwnProperty()</code>.</li>
+        <li>Todos los objetos en JavaScript, si no tienen prototipos personalizados, heredan de <code>Object.prototype</code>.</li>
+      </ul>
+  
       <h4>car:</h4>
-      <li>Representa un objeto especifico con una propiedad personalizada, este caso, color: 'red'.</li>
-      <li>Este objeto tiene una referencia (__proto__) que apunta a Object.prototype, lo que permite que herede sus métodos y propiedades.</li>
+      <ul>
+        <li>Representa un objeto específico con una propiedad personalizada, este caso, <code>color: 'red'</code>.</li>
+        <li>Este objeto tiene una referencia (<code>__proto__</code>) que apunta a <code>Object.prototype</code>, lo que permite que herede sus métodos y propiedades.</li>
+      </ul>
+  
       <h4>Relación entre los elementos:</h4>
-      <li>El constructor (Oject) tiene una propiedad .prototype que apunta a su prototipo (Object.prototype).</li>
-      <li>Cada instancia de objeto tiene una referncia especial, __proto__, que apunta al prototipo del constructor que lo creó.</li>
-      <li>Esto permite que car acceda a métodos y propiedades definidas en Object.prototype.</li>
+      <ul>
+        <li>El constructor (<code>Object</code>) tiene una propiedad <code>.prototype</code> que apunta a su prototipo (<code>Object.prototype</code>).</li>
+        <li>Cada instancia de objeto tiene una referencia especial, <code>__proto__</code>, que apunta al prototipo del constructor que lo creó.</li>
+        <li>Esto permite que <code>car</code> acceda a métodos y propiedades definidas en <code>Object.prototype</code>.</li>
+      </ul>
+  
       <h4>Resumen:</h4>
-      <p>El diagrama nos ilustra cómo JavaScript utiliza prototipos para establecer relaciones entre objetos, implementando un mecanismo de herencia dinámica
-        en el lenguaje. Es fundamental para entender cómo se comportan los objetos en JavaScript y cómo los métodos y propiedades se comparten a través de la cadena prototípica</p>
-
-    </article>   
+      <p>El diagrama nos ilustra cómo JavaScript utiliza prototipos para establecer relaciones entre objetos, implementando un mecanismo de herencia dinámica en el lenguaje. Es fundamental para entender cómo se comportan los objetos en JavaScript y cómo los métodos y propiedades se comparten a través de la cadena prototípica.</p>
+    </details>
   </section>
+  
+  
 
   <section id="fuentes-de-informacion">
     <h2>Fuentes de Información</h2>
@@ -325,6 +359,7 @@
     <p>Sandeep. (2018, 20 junio). Prototype in Javascript. Codementor. https://www.codementor.io/@sandeepranjan2007/prototype-in-javascipt-knbve0lqo</p>
     <p>MooTools Forge | EnlighterJS. (s. f.). https://mootools.net/forge/p/enlighterjs</p>
   </section>
+
   <footer>
     <p>Creado por Diego Iván Dueñas Padilla</p>
   </footer>
